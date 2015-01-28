@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link id="ppstyle" rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body onLoad="onLoaded()">
+   
+
+        <input id="number" type="number" min="1" value="1">
+
+        <input id="gutter" type="number" min="0" value="0">
+
+        <input id="setColumn" type="button" value="Ok">
+
+
+<script src="./js/lib/CSInterface-4.2.0.js"></script>
+<script src="./js/themeSwitcher.js"></script>
+<script src="./js/lib/jquery-1.9.1.min.js"></script>
+
+<script src="./js/main.js"></script>
+
+<script>
+    var n = window.localStorage["number"],
+        g = window.localStorage["gutter"];
+    
+    $('#setColumn').on('click', function(e){
+        var number = $('#number').val(),
+            gutter = $('#gutter').val();
+        localStorage["number"] = number;
+        localStorage["gutter"] = gutter;
+    });
+    
+    $('#number').val(n);
+    $('#gutter').val(g);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest ExtensionBundleId="UberColumns" ExtensionBundleName="UberColumns" ExtensionBundleVersion="1.1" Version="4.0">
+    <Author>Anton Lyubushkin [nvkzNemo]</Author> 
+    <Contact mailto="nvkz.nemo@gmail.com" />
+    <Abstract>
+        <![CDATA[
+        Text columns for Adobe Photoshop.
+        
+        Developed by Anton Lyubushkin (http://lyubushkin.pro/) & Evgeny Agasyanc (http://www.agasyanc.ru/).
+        ]]>
+    </Abstract>
+    <ExtensionList>
+        <Extension Id="com.nvkznemo.ubercolumns.extension" Version="1.1"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="PHSP" Version="[14.0,99.9]"/>
+            <Host Name="PHXS" Version="[14.0,99.9]"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="4.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.nvkznemo.ubercolumns.extension">
+        <DispatchInfo>
+            <Resources>
+                <MainPath>./index.html</MainPath>
+                <ScriptPath>./host/main.jsxbin</ScriptPath>
+            </Resources>
+            <UI>
+                <Type>Panel</Type>
+                <Menu>Columns</Menu>
+                <Geometry>
+                    <Size>
+                        <Height>65</Height>
+                        <Width>240</Width>
+                    </Size>
+                    <MinSize>
+                        <Height>65</Height>
+                        <Width>240</Width>
+                    </MinSize>
+                    <!--
+                    <MaxSize>
+                        <Height>550</Height>
+                        <Width>400</Width>
+                    </MaxSize>
+                    -->
+                </Geometry>
+                <Icons>
+                    <Icon Type="Normal">./img/normal.png</Icon>
+                    <Icon Type="DarkNormal">./img/darknormal.png</Icon>
+                </Icons>
+            </UI>
+        </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
